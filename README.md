@@ -1,3 +1,6 @@
+This is an extension of an existing VIPER implementations.  It aims to simplify and improve the previous
+one by adding some build in utilities to the modules.
+
 ![iOS VIPER](/Images/ios_viper_logo.png "iOS VIPER")
 
 # Versions
@@ -91,7 +94,7 @@ protocol WireframeInterface: class {
 class BaseWireframe {
 
     private unowned var _viewController: UIViewController
-    
+
     //to retain view controller reference upon first access
     private var _temporaryStoredViewController: UIViewController?
 
@@ -103,40 +106,40 @@ class BaseWireframe {
 }
 
 extension BaseWireframe: WireframeInterface {
-    
+
 }
 
 extension BaseWireframe {
-    
+
     var viewController: UIViewController {
         defer { _temporaryStoredViewController = nil }
         return _viewController
     }
-    
+
     var navigationController: UINavigationController? {
         return viewController.navigationController
     }
-    
+
 }
 
 extension UIViewController {
-    
+
     func presentWireframe(_ wireframe: BaseWireframe, animated: Bool = true, completion: (()->())? = nil) {
         present(wireframe.viewController, animated: animated, completion: completion)
     }
-    
+
 }
 
 extension UINavigationController {
-    
+
     func pushWireframe(_ wireframe: BaseWireframe, animated: Bool = true) {
         self.pushViewController(wireframe.viewController, animated: animated)
     }
-    
+
     func setRootWireframe(_ wireframe: BaseWireframe, animated: Bool = true) {
         self.setViewControllers([wireframe.viewController], animated: animated)
     }
-    
+
 }
 
 extension BaseWireframe: WireframeInterface {
@@ -244,7 +247,7 @@ final class LoginWireframe: BaseWireframe {
     init() {
         let moduleViewController = _storyboard.instantiateViewController(ofType: LoginViewController.self)
         super.init(viewController: moduleViewController)
-        
+
         let interactor = LoginInteractor()
         let presenter = LoginPresenter(wireframe: self, view: moduleViewController, interactor: interactor)
         moduleViewController.presenter = presenter
@@ -379,7 +382,7 @@ extension LoginPresenter: LoginPresenterInterface {
 }
 
 private extension LoginPresenter {
-    
+
     func _handleLoginResult(_ result: Result< JSONAPIObject<User> >) {
         switch result {
         case .success(let jsonObject):
@@ -418,7 +421,7 @@ final class LoginWireframe: BaseWireframe {
     init() {
         let moduleViewController = _storyboard.instantiateViewController(ofType: LoginViewController.self)
         super.init(viewController: moduleViewController)
-        
+
         let interactor = LoginInteractor()
         let presenter = LoginPresenter(wireframe: self, view: moduleViewController, interactor: interactor)
         moduleViewController.presenter = presenter
