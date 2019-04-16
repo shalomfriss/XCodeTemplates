@@ -14,8 +14,8 @@ import UIKit
 //Protocols
 
 protocol ___VARIABLE_moduleName___ModuleInterface {
-    func navigate(to option: ___VARIABLE_moduleName___NavigationOption, animated:Bool = true)
-    func link(to:String, animated:Bool = true)
+    func navigate(to option: ___VARIABLE_moduleName___NavigationOption, animated:Bool)
+    func link(to:String, animated:Bool)
 }
 
 protocol ___VARIABLE_moduleName___ModelInterface {
@@ -56,7 +56,7 @@ class ___VARIABLE_moduleName___Module: BaseModule {
 
 extension ___VARIABLE_moduleName___Module: ___VARIABLE_moduleName___ModuleInterface {
 
-    func navigate(to option: ___VARIABLE_moduleName___NavigationOption, , animated:Bool = true) {
+    func navigate(to option: ___VARIABLE_moduleName___NavigationOption, animated:Bool = true) {
     }
 
     func link(to:String, animated:Bool = true) {
