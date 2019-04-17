@@ -14,3 +14,16 @@ To install the Xcode templates run:
 
 To uninstall run:
 > make uninstall_templates
+
+### Sample usage
+Say you generate a root module called RootModule and a child module called ChildModule.
+To navigate to your child module you add a case to
+
+```Swift
+
+enum RootModuleNavigationOption:CaseIterable {
+  case placeholder
+  case ChildModule
+}
+
+```
