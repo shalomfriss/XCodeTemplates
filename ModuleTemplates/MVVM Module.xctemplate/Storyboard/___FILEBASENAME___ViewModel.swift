@@ -10,25 +10,25 @@
 
 import UIKit
 
-class ___VARIABLE_moduleName___Presenter {
+class ___VARIABLE_moduleName___ViewModel {
 
     // MARK: - Private properties -
 
     private unowned let _view: ___VARIABLE_moduleName___ViewInterface
     private let _module: ___VARIABLE_moduleName___ModuleInterface
-    private let _interactor: ___VARIABLE_moduleName___InteractorInterface
+    private let _model: ___VARIABLE_moduleName___ModelInterface
 
     // MARK: - Lifecycle -
 
-    init(module: ___VARIABLE_moduleName___ModuleInterface, view: ___VARIABLE_moduleName___ViewInterface, interactor: ___VARIABLE_moduleName___InteractorInterface) {
+    init(module: ___VARIABLE_moduleName___ModuleInterface, view: ___VARIABLE_moduleName___ViewInterface, model: ___VARIABLE_moduleName___ModelInterface) {
         _module = module
         _view = view
-        _interactor = interactor
+        _model = model
     }
 }
 
 // MARK: - Extensions -
 
-extension ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___PresenterInterface {
+extension ___VARIABLE_moduleName___ViewModel: ___VARIABLE_moduleName___ViewModelInterface {
 
 }

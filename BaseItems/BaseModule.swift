@@ -1,16 +1,13 @@
 import UIKit
 
-protocol NavigationOptionProtocol {}
-struct GlobalNavigation:NavigationOptionProtocol {
-
-}
-
+//Protocol
 protocol BaseModuleProtocol:class {
     func presentModule(_ module:BaseModule, animated:Bool, completion: (() -> Void)?)
     func pushModule(_ module: BaseModule, animated: Bool)
     func setRootModule(_ module: BaseModule, animated: Bool)
 }
 
+//Initi
 class BaseModule {
 
     private unowned var _viewController: UIViewController
@@ -21,6 +18,7 @@ class BaseModule {
 
 }
 
+//Getter / setter for common items
 extension BaseModule {
     public var viewController: UIViewController {
         return _viewController
@@ -31,6 +29,7 @@ extension BaseModule {
     }
 }
 
+//Internal navigation
 extension BaseModule:BaseModuleProtocol {
 
     public func presentModule(_ module:BaseModule, animated:Bool = true, completion: (() -> Void)? = nil) {
