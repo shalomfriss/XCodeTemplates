@@ -12,10 +12,7 @@ import UIKit
 
 
 //Protocols
-
 protocol ___VARIABLE_moduleName___ModuleInterface {
-    func navigate(to option: ___VARIABLE_moduleName___NavigationOption, animated:Bool)
-    func link(to:String, animated:Bool)
 }
 
 protocol ___VARIABLE_moduleName___ModelInterface {
@@ -27,7 +24,7 @@ protocol ___VARIABLE_moduleName___ViewModelInterface {
 protocol ___VARIABLE_moduleName___ViewInterface:class {
 }
 
-enum ___VARIABLE_moduleName___NavigationOption:String, CaseIterable {
+enum ___VARIABLE_moduleName___NavigationOption:String, CaseIterable, NavigationOptionProtocol {
   case placeholder
 }
 
@@ -56,14 +53,20 @@ class ___VARIABLE_moduleName___Module: BaseModule {
 
 extension ___VARIABLE_moduleName___Module: ___VARIABLE_moduleName___ModuleInterface {
 
-    func navigate(to option: ___VARIABLE_moduleName___NavigationOption, animated:Bool = true) {
-    }
+  func navigate(to option: NavigationOptionProtocol, animated:Bool = true) {
+    let link = option as! ___VARIABLE_moduleName___NavigationOption
+  }
 
-    func link(to:String, animated:Bool = true) {
-        let routes = ___VARIABLE_moduleName___NavigationOption.allCases.map { "\($0)" }
-        if(routes.contains(to)) {
-          let route = ___VARIABLE_moduleName___NavigationOption(rawValue: to)!
-          navigate(to: route)
-        }
-    }
+  func link(to option:String, animated:Bool = true) {
+      let routes = ___VARIABLE_moduleName___NavigationOption.allCases.map { "\($0)" }
+      if(routes.contains(option)) {
+        let route = ___VARIABLE_moduleName___NavigationOption(rawValue: option)!
+        navigate(to: route, animated: animated)
+      }
+  }
+
+  func deepNavigate(to option:NavigationPath, animated:Bool = true) {
+      var path = option
+      let route = path.links.removeFirst()
+  }
 }

@@ -1,10 +1,16 @@
 import UIKit
 
+protocol NavigationOptionProtocol {}
+
 //Protocol
 protocol BaseModuleProtocol:class {
     func presentModule(_ module:BaseModule, animated:Bool, completion: (() -> Void)?)
     func pushModule(_ module: BaseModule, animated: Bool)
     func setRootModule(_ module: BaseModule, animated: Bool)
+
+    func navigate(to option: NavigationOptionProtocol, animated:Bool)
+    func link(to option:String, animated:Bool = true)
+    func deepNavigate(to option:NavigationPath, animated:Bool = true)
 }
 
 //Initi
