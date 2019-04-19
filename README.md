@@ -36,9 +36,12 @@ func navigate(to option: RootModuleNavigationOption) {
     case ChildModule:
       let child = ChildModule()
       self.presentModule(child)
-    case default: 
+    case default:
       break
   }
 }
 ```
 
+---
+### A simple way to create your entire app navigation and routing
+#### passing data
