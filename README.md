@@ -41,7 +41,3 @@ func navigate(to option: RootModuleNavigationOption) {
   }
 }
 ```
-
----
-### A simple way to create your entire app navigation and routing
-#### passing data
