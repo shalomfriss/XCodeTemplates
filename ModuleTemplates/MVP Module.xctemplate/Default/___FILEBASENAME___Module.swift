@@ -13,6 +13,9 @@ import UIKit
 
 //Protocols
 protocol ___VARIABLE_moduleName___ModuleInterface {
+  func navigate(to option: NavigationOptionProtocol, animated:Bool)
+  func link(to option:String, animated:Bool)
+  func deepNavigate(to option:NavigationPath, animated:Bool)
 }
 
 protocol ___VARIABLE_moduleName___ModelInterface {

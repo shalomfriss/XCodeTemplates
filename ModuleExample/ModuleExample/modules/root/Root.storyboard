@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="XJ1-QA-Nrj">
+            <objects>
+                <viewController storyboardIdentifier="RootViewController" id="zIc-eW-6fX" customClass="RootViewController" customModule="ModuleExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z2g-4m-atm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAH-Ia-Pf6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPE-lR-2Nr">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Root" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeJ-o6-dah">
+                                                <rect key="frame" x="146" y="100" width="83" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="83" id="e69-Bs-aIb"/>
+                                                    <constraint firstAttribute="height" constant="43" id="ewb-Ji-PIc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" cyan="1" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="PeJ-o6-dah" firstAttribute="centerX" secondItem="bPE-lR-2Nr" secondAttribute="centerX" id="XxG-Th-bgr"/>
+                                            <constraint firstItem="PeJ-o6-dah" firstAttribute="top" secondItem="bPE-lR-2Nr" secondAttribute="top" constant="100" id="xZv-8X-se9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bPE-lR-2Nr" firstAttribute="leading" secondItem="wAH-Ia-Pf6" secondAttribute="leading" id="68n-Xv-Dh1"/>
+                                    <constraint firstItem="bPE-lR-2Nr" firstAttribute="height" secondItem="wAH-Ia-Pf6" secondAttribute="height" priority="250" id="gwo-kn-Dmx"/>
+                                    <constraint firstItem="bPE-lR-2Nr" firstAttribute="width" secondItem="wAH-Ia-Pf6" secondAttribute="width" id="jdP-mC-gtH"/>
+                                    <constraint firstAttribute="trailing" secondItem="bPE-lR-2Nr" secondAttribute="trailing" id="kqO-gQ-ThZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="bPE-lR-2Nr" secondAttribute="bottom" id="vyy-O5-Q4d"/>
+                                    <constraint firstItem="bPE-lR-2Nr" firstAttribute="top" secondItem="wAH-Ia-Pf6" secondAttribute="top" id="yFi-YB-Hfe"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wAH-Ia-Pf6" firstAttribute="trailing" secondItem="3pi-N7-nbV" secondAttribute="trailing" id="7tg-Wd-Wl5"/>
+                            <constraint firstItem="wAH-Ia-Pf6" firstAttribute="top" secondItem="Z2g-4m-atm" secondAttribute="top" id="jsx-un-OYY"/>
+                            <constraint firstItem="wAH-Ia-Pf6" firstAttribute="bottom" secondItem="3pi-N7-nbV" secondAttribute="bottom" id="pF7-sd-AX7"/>
+                            <constraint firstItem="wAH-Ia-Pf6" firstAttribute="leading" secondItem="3pi-N7-nbV" secondAttribute="leading" id="yUx-ry-O5J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3pi-N7-nbV"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rle-ol-2Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306" y="303"/>
+        </scene>
+    </scenes>
+</document>
