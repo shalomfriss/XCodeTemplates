@@ -45,7 +45,7 @@ func navigate(to option: RootModuleNavigationOption) {
 ***Note***: All of the interfaces are in the module class.
 
 ---
-#Simple navigation and app structure
+# Simple navigation and app structure
 ---
 The sample app contains a few simple modules.  A root module constructed in AppDelegate like so:
 ```swift
