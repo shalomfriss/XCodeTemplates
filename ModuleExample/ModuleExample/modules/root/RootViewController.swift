@@ -14,16 +14,21 @@ class RootViewController: UIViewController {
     
     // MARK: - Public properties -
     
+    @IBOutlet weak var gotoMod1: UIButton!
     var presenter: RootPresenterInterface!
     
     // MARK: - Lifecycle -
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //presenter.navTo()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    @IBAction func gotoMod1Clicked(_ sender: Any) {
+        presenter.navigate(to: RootNavigationOption.Mod1, animated: true)
+    }
 }
 
 // MARK: - Extensions -

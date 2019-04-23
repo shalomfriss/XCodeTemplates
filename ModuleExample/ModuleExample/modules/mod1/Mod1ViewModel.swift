@@ -24,7 +24,14 @@ class Mod1ViewModel {
         _module = module
         _view = view
         _model = model
+        
+        
     }
+    
+    public func navigate(to: NavigationOptionProtocol, animated:Bool = true) {
+        _module.navigate(to: to, animated: animated)
+    }
+    
 }
 
 // MARK: - Extensions -

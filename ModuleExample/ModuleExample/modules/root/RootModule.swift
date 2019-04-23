@@ -22,20 +22,23 @@ protocol RootInteractorInterface {
 }
 
 protocol RootPresenterInterface {
-    func navTo(option:RootNavigationOption)
+    func navigate(to option: NavigationOptionProtocol, animated:Bool)
+    func link(to option:String, animated:Bool)
+    func deepNavigate(to option:NavigationPath, animated:Bool)
 }
 
 protocol RootViewInterface:class {
 }
 
 enum RootNavigationOption:String, CaseIterable, NavigationOptionProtocol {
-  case placeholder
+    case placeholder
+    case Mod1
 }
 
 class RootModule: BaseModule {
-
+    
     // MARK: - Private properties -
-
+    
     private let _storyboard = UIStoryboard(name: "Root", bundle: nil)
 
     // MARK: - Module setup -
@@ -58,6 +61,14 @@ class RootModule: BaseModule {
 extension RootModule: RootModuleInterface {
   func navigate(to option: NavigationOptionProtocol, animated:Bool = true) {
     let link = option as! RootNavigationOption
+    switch link {
+    case .Mod1:
+        let mod = Mod1Module()
+        //self.pushModule(mod)
+        self.setRootModule(mod)
+    default:
+        break
+    }
   }
 
   func link(to option:String, animated:Bool = true) {

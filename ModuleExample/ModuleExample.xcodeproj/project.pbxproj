@@ -32,6 +32,11 @@
 		CE78D4A1226D40F6000879CE /* NavigationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D49E226D40F6000879CE /* NavigationPath.swift */; };
 		CE78D4A2226D40F6000879CE /* NavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D49F226D40F6000879CE /* NavigationLink.swift */; };
 		CE78D4A3226D40F6000879CE /* BaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D4A0226D40F6000879CE /* BaseModule.swift */; };
+		CE78D4AA226D5A1A000879CE /* Mod2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE78D4A5226D5A1A000879CE /* Mod2.storyboard */; };
+		CE78D4AB226D5A1A000879CE /* Mod2Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D4A6226D5A1A000879CE /* Mod2Module.swift */; };
+		CE78D4AC226D5A1A000879CE /* Mod2Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D4A7226D5A1A000879CE /* Mod2Presenter.swift */; };
+		CE78D4AD226D5A1A000879CE /* Mod2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D4A8226D5A1A000879CE /* Mod2ViewController.swift */; };
+		CE78D4AE226D5A1A000879CE /* Mod2Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D4A9226D5A1A000879CE /* Mod2Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,11 @@
 		CE78D49E226D40F6000879CE /* NavigationPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationPath.swift; sourceTree = "<group>"; };
 		CE78D49F226D40F6000879CE /* NavigationLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLink.swift; sourceTree = "<group>"; };
 		CE78D4A0226D40F6000879CE /* BaseModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseModule.swift; path = ../../../BaseItems/BaseModule.swift; sourceTree = "<group>"; };
+		CE78D4A5226D5A1A000879CE /* Mod2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mod2.storyboard; sourceTree = "<group>"; };
+		CE78D4A6226D5A1A000879CE /* Mod2Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mod2Module.swift; sourceTree = "<group>"; };
+		CE78D4A7226D5A1A000879CE /* Mod2Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mod2Presenter.swift; sourceTree = "<group>"; };
+		CE78D4A8226D5A1A000879CE /* Mod2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mod2ViewController.swift; sourceTree = "<group>"; };
+		CE78D4A9226D5A1A000879CE /* Mod2Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mod2Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +197,7 @@
 		CE78D475226D3FDF000879CE /* mod1 */ = {
 			isa = PBXGroup;
 			children = (
+				CE78D4A4226D5A08000879CE /* mod2 */,
 				CE78D476226D3FE7000879CE /* sub1 */,
 				CE78D481226D4002000879CE /* Mod1.storyboard */,
 				CE78D482226D4002000879CE /* Mod1Module.swift */,
@@ -226,6 +237,18 @@
 			);
 			name = navigation;
 			path = ../../../BaseItems/navigation;
+			sourceTree = "<group>";
+		};
+		CE78D4A4226D5A08000879CE /* mod2 */ = {
+			isa = PBXGroup;
+			children = (
+				CE78D4A5226D5A1A000879CE /* Mod2.storyboard */,
+				CE78D4A6226D5A1A000879CE /* Mod2Module.swift */,
+				CE78D4A7226D5A1A000879CE /* Mod2Presenter.swift */,
+				CE78D4A8226D5A1A000879CE /* Mod2ViewController.swift */,
+				CE78D4A9226D5A1A000879CE /* Mod2Model.swift */,
+			);
+			path = mod2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +361,7 @@
 				CE78D44D226D3FCE000879CE /* Assets.xcassets in Resources */,
 				CE78D44B226D3FCD000879CE /* Main.storyboard in Resources */,
 				CE78D486226D4002000879CE /* Mod1.storyboard in Resources */,
+				CE78D4AA226D5A1A000879CE /* Mod2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,16 +388,20 @@
 			files = (
 				CE78D47F226D3FF5000879CE /* Sub1ViewController.swift in Sources */,
 				CE78D448226D3FCD000879CE /* ViewController.swift in Sources */,
+				CE78D4AE226D5A1A000879CE /* Mod2Model.swift in Sources */,
 				CE78D494226D400E000879CE /* RootInteractor.swift in Sources */,
 				CE78D491226D400E000879CE /* RootModule.swift in Sources */,
+				CE78D4AD226D5A1A000879CE /* Mod2ViewController.swift in Sources */,
 				CE78D489226D4002000879CE /* Mod1Model.swift in Sources */,
 				CE78D493226D400E000879CE /* RootViewController.swift in Sources */,
 				CE78D48A226D4002000879CE /* Mod1ViewModel.swift in Sources */,
+				CE78D4AB226D5A1A000879CE /* Mod2Module.swift in Sources */,
 				CE78D480226D3FF5000879CE /* Sub1Model.swift in Sources */,
 				CE78D492226D400E000879CE /* RootPresenter.swift in Sources */,
 				CE78D488226D4002000879CE /* Mod1ViewController.swift in Sources */,
 				CE78D4A1226D40F6000879CE /* NavigationPath.swift in Sources */,
 				CE78D47E226D3FF5000879CE /* Sub1Presenter.swift in Sources */,
+				CE78D4AC226D5A1A000879CE /* Mod2Presenter.swift in Sources */,
 				CE78D47D226D3FF5000879CE /* Sub1Module.swift in Sources */,
 				CE78D4A2226D40F6000879CE /* NavigationLink.swift in Sources */,
 				CE78D4A3226D40F6000879CE /* BaseModule.swift in Sources */,

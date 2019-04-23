@@ -26,13 +26,21 @@ class RootPresenter {
         _interactor = interactor
     }
     
-    public func navTo(option:RootNavigationOption) {
-        
-    }
+    
 }
 
 // MARK: - Extensions -
 
 extension RootPresenter: RootPresenterInterface {
-
+    public func navigate(to option: NavigationOptionProtocol, animated:Bool = true) {
+        _module.navigate(to: option, animated: true)
+    }
+    
+    func link(to option: String, animated: Bool) {
+        _module.link(to: option, animated: animated)
+    }
+    
+    func deepNavigate(to option: NavigationPath, animated: Bool) {
+        _module.deepNavigate(to: option, animated: true)
+    }
 }

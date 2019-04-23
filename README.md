@@ -41,3 +41,32 @@ func navigate(to option: RootModuleNavigationOption) {
   }
 }
 ```
+
+***Note***: All of the interfaces are in the module class.
+
+---
+#Simple navigation and app structure
+---
+The sample app contains a few simple modules.  A root module constructed in AppDelegate like so:
+```swift
+rootModule = RootModule()
+
+if let vc = rootModule?.viewController {
+  let nav = UINavigationController(rootViewController: vc)
+  self.window = UIWindow(frame: UIScreen.main.bounds)
+  self.window?.rootViewController =  nav
+  self.window?.makeKeyAndVisible()
+}
+```
+
+Also, there is a top level module and a submodule which demostrate easy and organized navigation.
+
+To replace a top level module use
+```swift
+self.setRootModule(module)
+```
+
+To add with subnavigation use
+```swift
+self.pushModule(module)
+```

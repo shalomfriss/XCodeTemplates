@@ -1,5 +1,5 @@
 //
-//  Mod1ViewController.swift
+//  Mod2ViewController.swift
 //  ModuleExample
 //
 //  Created by user on 4/21/19.
@@ -10,25 +10,21 @@
 
 import UIKit
 
-class Mod1ViewController: UIViewController {
+class Mod2ViewController: UIViewController {
 
     // MARK: - Public properties -
 
-    var viewModel: Mod1ViewModelInterface!
+    var presenter: Mod2PresenterInterface!
 
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    @IBAction func submoduleClicked(_ sender: Any) {
-        viewModel.navigate(to: Mod1NavigationOption.Submodule, animated: true)
-    }
-    
+
 }
 
 // MARK: - Extensions -
 
-extension Mod1ViewController: Mod1ViewInterface {
+extension Mod2ViewController: Mod2ViewInterface {
 }

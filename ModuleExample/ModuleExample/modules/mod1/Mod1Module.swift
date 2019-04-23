@@ -22,6 +22,7 @@ protocol Mod1ModelInterface {
 }
 
 protocol Mod1ViewModelInterface {
+    func navigate(to: NavigationOptionProtocol, animated:Bool)
 }
 
 protocol Mod1ViewInterface:class {
@@ -29,6 +30,7 @@ protocol Mod1ViewInterface:class {
 
 enum Mod1NavigationOption:String, CaseIterable, NavigationOptionProtocol {
   case placeholder
+    case Submodule
 }
 
 class Mod1Module: BaseModule {
@@ -58,6 +60,13 @@ extension Mod1Module: Mod1ModuleInterface {
 
   func navigate(to option: NavigationOptionProtocol, animated:Bool = true) {
     let link = option as! Mod1NavigationOption
+    switch link {
+    case .Submodule:
+        let submod = Sub1Module()
+        self.pushModule(submod)
+    default:
+        break
+    }
   }
 
   func link(to option:String, animated:Bool = true) {
